@@ -63,7 +63,7 @@ From: continuumio/miniconda3:latest
     tabulate \
     zlib \
     `# R packages` \
-    r-base=4 \
+    r-base>=4.0.3 \
     r-data.table \
     r-devtools \
     r-dplyr \

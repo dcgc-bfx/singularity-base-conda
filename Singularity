@@ -4,7 +4,7 @@ From: continuumio/miniconda3:latest
 %labels
     Author fabian.rost@tu-dresden.de
     Organisation DcGC
-    Version v0.0.1
+    Version v0.1
 
 %help
     Base container based on conda docker container with basic python and R
@@ -16,15 +16,15 @@ From: continuumio/miniconda3:latest
 %post
   export PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-  apt-get update --fix-missing
-  apt-get install -y \
+  apt-get update --fix-missing -q
+  apt-get install -y -q\
     build-essential \
     gawk \
     git \
     p7zip-full \
     unzip
 
-  apt-get clean
+  apt-get clean -q
   rm -rf /var/lib/apt/lists/*
 
   conda update --quiet --yes conda

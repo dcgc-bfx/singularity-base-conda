@@ -4,7 +4,7 @@ From: continuumio/miniconda3:latest
 %labels
     Author fabian.rost@tu-dresden.de
     Organisation DcGC
-    Version v0.1
+    Version latest
 
 %help
     Base container based on conda docker container with basic python and R
@@ -21,6 +21,7 @@ From: continuumio/miniconda3:latest
     build-essential \
     gawk \
     git \
+    libatlas-base-dev \
     p7zip-full \
     unzip
 

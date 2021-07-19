@@ -32,6 +32,8 @@ From: continuumio/miniconda3:latest
   conda config --add channels defaults
   conda config --add channels bioconda
   conda config --add channels conda-forge
+  conda config --add channels nvidia
+  conda config --add channels rapidsai
 
   conda install --quiet --yes mamba
 
@@ -40,7 +42,9 @@ From: continuumio/miniconda3:latest
   mamba install --quiet --yes \
     blosc \
     bottleneck \
+    cudatoolkit=10.1 \
     cmake \
+    cuml \
     fastparquet \
     fsspec \
     gcsfs \
